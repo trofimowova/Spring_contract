@@ -8,6 +8,6 @@ public class BaseTestClass {
 
     @Before
     public void setup() {
-        RestAssuredMockMvc.standaloneSetup(new FraudController());
+        RestAssuredMockMvc.standaloneSetup(new DataController());
     }
 }

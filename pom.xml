@@ -59,7 +59,7 @@
 				<version>3.0.4</version>
 				<extensions>true</extensions>
 				<configuration>
-					<testFramework>JUNIT5</testFramework>
+
 					<baseClassForTests>com.example.Sbb.BaseTestClass</baseClassForTests>
 				</configuration>
 			</plugin>
