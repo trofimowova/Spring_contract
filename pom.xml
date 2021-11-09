@@ -59,8 +59,8 @@
 				<version>3.0.4</version>
 				<extensions>true</extensions>
 				<configuration>
-
 					<baseClassForTests>com.example.Sbb.BaseTestClass</baseClassForTests>
+					<testFramework>JUNIT</testFramework>
 				</configuration>
 			</plugin>
 			<plugin>
