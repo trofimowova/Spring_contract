@@ -1,18 +1,37 @@
-package com.example.Sbb;
+package com.example;
 
 
+
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 @RestController
 public class DataController {
 
-    DateTime dateTime = DateTime.parse("2018-05-05T11:50:55");
+
+    String dateTime = "11/27/2020 05:35:00";
+    DateTimeFormatter datetimeformat = DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
+
+    org.joda.time.DateTime joda_time = datetimeformat.parseDateTime(dateTime);
+
+
+
+
     long longId = 115101;
 
 
@@ -33,7 +52,7 @@ public class DataController {
         datagroupOverviewTo.setAdcDump("dsfdsfds");
         datagroupOverviewTo.setAdcTemporal(false);
         datagroupOverviewTo.setBeschreibung("Lorem");
-        datagroupOverviewTo.setErstellungsZeitpunkt(dateTime);
+        datagroupOverviewTo.setErstellungsZeitpunkt(joda_time);
         datagroupOverviewTo.setExporterVersion("dsfdsfds");
         datagroupOverviewTo.setStatus("dsfdsfds");
         datagroupOverviewTo.setPostProcessorVersion("dsfdsfds");

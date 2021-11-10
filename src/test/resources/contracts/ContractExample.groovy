@@ -15,7 +15,7 @@ org.springframework.cloud.contract.spec.Contract.make {
     response {
         status OK()
         body(
-               [ "id":$(regex('[0-9]{10}')),
+               [ "id":regex("\\d{6}"),
                 "beschreibung":anyAlphaUnicode()]
         )
         headers {

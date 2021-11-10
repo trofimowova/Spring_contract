@@ -1,4 +1,4 @@
-package com.example.Sbb;
+package com.example;
 
 import org.apache.commons.lang3.StringUtils;
 

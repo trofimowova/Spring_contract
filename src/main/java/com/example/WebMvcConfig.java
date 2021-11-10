@@ -1,4 +1,4 @@
-package com.example.Sbb;
+package com.example;
 
 
 import com.fasterxml.jackson.databind.Module;
