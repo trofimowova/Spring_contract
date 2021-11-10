@@ -9,6 +9,7 @@ import org.joda.time.format.ISODateTimeFormat;
 
 import java.io.IOException;
 
+
 public class DateTimeSerializer extends StdSerializer<DateTime> {
 
     private static final long serialVersionUID = -1665313336276336682L;
