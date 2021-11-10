@@ -16,7 +16,18 @@ org.springframework.cloud.contract.spec.Contract.make {
         status OK()
         body(
                [ "id":regex("\\d{6}"),
-                "beschreibung":anyAlphaUnicode()]
+                "beschreibung":anyAlphaUnicode(),
+                 "adcDump":regex("null"),
+                 "readyForSmoke":regex("false|true"),
+                 "status":regex("CONFIRMED|UNCONFIRMED"),
+                 "postProcessorVersion":regex("null"),
+                 "exporterVersion":regex("null"),
+                 "adcTemporal":regex("false|true"),
+                 "latestPlandatenId":regex("null"),
+
+
+
+               ]
         )
         headers {
             contentType('application/json')

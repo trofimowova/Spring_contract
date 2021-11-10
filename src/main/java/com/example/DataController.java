@@ -1,10 +1,6 @@
 package com.example;
 
 
-
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,13 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 @RestController
 public class DataController {
@@ -28,7 +18,6 @@ public class DataController {
     DateTimeFormatter datetimeformat = DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
 
     org.joda.time.DateTime joda_time = datetimeformat.parseDateTime(dateTime);
-
 
 
 
@@ -48,18 +37,18 @@ public class DataController {
 
 
         DatagroupOverviewTo datagroupOverviewTo = new DatagroupOverviewTo();
-        datagroupOverviewTo.setAdcBuildNumber("dsfdsfds"+idx);
-        datagroupOverviewTo.setAdcDump("dsfdsfds");
+        datagroupOverviewTo.setAdcBuildNumber("Build"+idx);
+        datagroupOverviewTo.setAdcDump("null");
         datagroupOverviewTo.setAdcTemporal(false);
         datagroupOverviewTo.setBeschreibung("Lorem");
         datagroupOverviewTo.setErstellungsZeitpunkt(joda_time);
-        datagroupOverviewTo.setExporterVersion("dsfdsfds");
-        datagroupOverviewTo.setStatus("dsfdsfds");
-        datagroupOverviewTo.setPostProcessorVersion("dsfdsfds");
+        datagroupOverviewTo.setExporterVersion("null");
+        datagroupOverviewTo.setStatus("CONFIRMED");
+        datagroupOverviewTo.setPostProcessorVersion("null");
         datagroupOverviewTo.setReadyForSmoke(false);
         datagroupOverviewTo.setId(longId);
-        datagroupOverviewTo.setLatestPlandatenId("dsfdsfds");
-
+        datagroupOverviewTo.setLatestPlandatenId("null");
+        datagroupOverviewTo.setUrl("http://datenrepo-novap-dev.sbb-cloud.net/datagroups/");
 
         return datagroupOverviewTo;
     }
