@@ -18,18 +18,16 @@ org.springframework.cloud.contract.spec.Contract.make {
         body(
                 ["id"                  : anyPositiveInt(),
                  "beschreibung"        : anyAlphaUnicode(),
-                 "adcDump"             : regex("null"),
+                 "adcDump"             : anyAlphaUnicode(),
                  "readyForSmoke"       : anyBoolean(),
-                 "url"                 : anyUrl(),
-                 "erstellungsZeitpunkt":anyPositiveInt(),
-                 "status"              : regex("CONFIRMED|UNCONFIRMED"),
-                 "postProcessorVersion": regex("null"),
-                 "exporterVersion"     : regex("null"),
+                 "url"                 : anyAlphaUnicode(),
+                 "erstellungsZeitpunkt": anyNumber(),
+                 "status"              : anyAlphaUnicode(),
+                 "postProcessorVersion": anyAlphaUnicode(),
+                 "exporterVersion"     : anyAlphaUnicode(),
                  "adcTemporal"         : anyBoolean(),
-                 "adcBuildNumber"      :  anyNonEmptyString(),
-                 "latestPlandatenId"   : regex("null"),
-
-
+                 "adcBuildNumber"      : anyAlphaUnicode(),
+                 "latestPlandatenId"   : anyAlphaUnicode()
 
                 ]
         )
