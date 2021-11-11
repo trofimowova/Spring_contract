@@ -38,7 +38,7 @@ public class DataController {
         datagroupOverviewTo.setAdcDump(idx % 2 == 0 ? null : String.valueOf(idx));
         datagroupOverviewTo.setAdcTemporal(false);
         datagroupOverviewTo.setBeschreibung(idx % 2 != 0 ? "Lorem" + (idx) : null);
-        datagroupOverviewTo.setErstellungsZeitpunkt(idx % 2 == 0 ? DateTime.now().minusHours(idx) : null);
+        datagroupOverviewTo.setErstellungsZeitpunkt(idx % 2 == 0 ? DateTime.now().minusDays(idx) : null);
         datagroupOverviewTo.setExporterVersion(idx % 2 != 0 ? null : String.valueOf(idx));
         datagroupOverviewTo.setStatus(idx % 2 == 0 ? "CONFIRMED" : null);
         datagroupOverviewTo.setPostProcessorVersion(idx % 2 != 0 ? null : String.valueOf(idx));
