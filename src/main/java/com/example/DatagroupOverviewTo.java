@@ -18,7 +18,7 @@ public class DatagroupOverviewTo {
     private String status;
     private String postProcessorVersion;
     private String exporterVersion;
-    private boolean adcTemporal;
+    private Boolean adcTemporal;
     private String adcBuildNumber;
     private String latestPlandatenId;
 }

@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.TimeZone;
 
 @RestController
 public class DataController {
@@ -18,8 +20,6 @@ public class DataController {
     DateTimeFormatter datetimeformat = DateTimeFormat.forPattern("MM/dd/yyyy HH:mm:ss");
 
     org.joda.time.DateTime joda_time = datetimeformat.parseDateTime(dateTime);
-
-
 
     long longId = 115101;
 
