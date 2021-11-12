@@ -9,31 +9,33 @@ org.springframework.cloud.contract.spec.Contract.make {
 
         ])
         headers {
-            contentType('application/json')
+            contentType(applicationJson())
         }
     }
+
     response {
         status OK()
         body(
-               [ "id":154101,
-                "beschreibung":"DATAGROUP_117.2.20191206-2201.P.P.22331107.0_MIN",
-                 "beschreibung":"DATAGROUP_117.2.20191206-2201.P.P.22331107.0_MIN",
-                 "adcDump":null,
-                 "readyForSmoke":false,
-                 "url":anyAlphaUnicode(),
-                 "erstellungsZeitpunkt":anyAlphaUnicode(),
-                 "status":anyAlphaUnicode(),
-                 "postProcessorVersion":null,
-                 "exporterVersion":null,
-                 "adcTemporal":false,
-                 "adcBuildNumber":null,
-                 "latestPlandatenId":null]
+                ["id"                  : anyPositiveInt(),
+                 "beschreibung"        : anyAlphaUnicode(),
+                 "adcDump"             : anyAlphaUnicode(),
+                 "readyForSmoke"       : anyBoolean(),
+                 "url"                 : anyUrl(),
+                 "erstellungsZeitpunkt": anyAlphaUnicode(),
+                 "status"              : anyAlphaUnicode(),
+                 "postProcessorVersion": anyAlphaUnicode(),
+                 "exporterVersion"     : anyAlphaUnicode(),
+                 "adcTemporal"         : anyBoolean(),
+                 "adcBuildNumber"      : anyAlphaUnicode(),
+                 "latestPlandatenId"   : anyAlphaUnicode()
 
+                ]
         )
         headers {
             contentType('application/json')
         }
     }
+
 }
 
 
